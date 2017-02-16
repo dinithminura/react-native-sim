@@ -25,6 +25,7 @@ This plugin uses two different Android APIs to receive SIM data:
 - `SubscriptionManager` (since API level 22)
 
 Since Android 6 (API level 23) a few methods of `TelephonyManager` require permission `READ_PHONE_STATE`.
+```xml
 <manifest ...>
   .
   .
@@ -32,8 +33,7 @@ Since Android 6 (API level 23) a few methods of `TelephonyManager` require permi
   .
   .
 </manifest>
-
-
+```
 All methods of `SubscriptionManager` require permission `READ_PHONE_STATE`.
 
 `SubscriptionManager` is able to access multiple SIM data. The return object of this cordova plugin provides the details of the available sim cards in an array (`cards`).
