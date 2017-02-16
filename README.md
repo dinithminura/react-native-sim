@@ -3,6 +3,8 @@ React Native plugin to get the device's SIM data (carrier name, mcc mnc, country
 
 ## Installation 
 
+npm i react-native-sim --save
+
 ## Supported Platforms
 
 - Android
@@ -23,6 +25,14 @@ This plugin uses two different Android APIs to receive SIM data:
 - `SubscriptionManager` (since API level 22)
 
 Since Android 6 (API level 23) a few methods of `TelephonyManager` require permission `READ_PHONE_STATE`.
+<manifest ...>
+  .
+  .
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+  .
+  .
+</manifest>
+
 
 All methods of `SubscriptionManager` require permission `READ_PHONE_STATE`.
 
